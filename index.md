@@ -48,11 +48,15 @@ _"I'm not a dirty whore, I bathe and I don't get paid. I'm a nice lady who gives
 
 We tried removing those through detecting "positive" words specific to each Dataframe, but that lead to the elimination of many relevant Tweets as well (eliminating tweets contatining the word `bath` in `dirty bomb` eliminates all Tweets mentioning a `bloodbath` for example), so the procedure seemed to do more harm than good and we made the choice of leaving those funny Tweets in the dataset as they represented a minority that shouldn't really affect the conclusion. 
 
-## Accounting for the interactive nature of Twitter
+## Rolling up (our Sleeves)
+### Accounting for the Interactive Nature of Twitter
 
 It's not only the writing of Tweets that can be registered by the government surveillance (and hence be prone to chilling effects), but other forms of online interaction as well (likes for example), so in our model we chose to model the total number of action instead of just the total number of Tweets, "action" meaning Tweeting, liking or replying.
 
-We got a total of **`#####`** actions over the period, the model we chose to do is a segmented linear regression of monthly aggregated data like in the original paper. This model helps us probe changes in trend in our data before and after the hypothesised chiller event (in this case Edward Snowden's revelation about U.S government surveillance).
+We got a total of **`#####`** actions over the period.
+
+### Modelling the Chaos of Twitter
+the model we chose to do is a segmented linear regression of monthly aggregated data like in the original paper. This model helps us probe changes in trend in our data before and after the hypothesised chiller event (in this case Edward Snowden's revelation about U.S government surveillance).
 
 The gives us the following plot:
 
@@ -60,4 +64,9 @@ The gives us the following plot:
 
 As we see, the trend in our data does change, but changes rather starkly to increase, and mostly due to extremely high values in the late summer of 2014, those values we deem to be due to the big increase in activity of ISIS during that period, so the terms included in our search became "hot topics" and were often mentioned and discussed over and over again on Twitter. But the other datapoints don't really seem to show any change in trend caused by the Snowden's leaks.
 
+## Whipping up (our Conclusions)
+We conclude that...
 
+
+## Looking Back (not up)
+What we would have done differently
