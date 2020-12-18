@@ -55,7 +55,7 @@ We tried removing those through detecting "positive" words specific to each Data
 
 It's not only the writing of Tweets that can be registered by the government surveillance (and hence be prone to chilling effects), but other forms of online interaction as well (likes for example), so in our model we chose to model the total number of action instead of just the total number of Tweets, "action" meaning Tweeting, liking or replying.
 
-We got a total of **`#####`** actions over the period.
+We got a total of 183.87 actions over the period.
 
 ### Modelling the Chaos of Twitter
 the model we chose to do is a segmented linear regression of monthly aggregated data like in the original paper. This model helps us probe changes in trend in our data before and after the hypothesised chiller event (in this case Edward Snowden's revelation about U.S government surveillance).
