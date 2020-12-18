@@ -42,38 +42,22 @@ Having a quick look at the Dataframes left us with some (expected, but nonethele
 
 The more fun to see but less fun to solve problem is the inclusion of irrelevant Tweets in the dataset. Some of them were wholesome like
 
-_Happy New Year everybody !! may 2012 be full of success , love and peace to everybody in the US, Iraq, Middle East and everywhere !!_ in the Dataframe `Iraq`, although some of them were, let's say less savoury:
+_Happy New Year everybody !! may 2012 be full of success , love and peace to everybody in the US, Iraq, Middle East and everywhere !!_. in the Dataframe `Iraq`, although some of them were, let's say less savoury:
 
-_"I'm not a dirty whore, I bathe and I don't get paid. I'm a nice lady who gives bomb ass blowjobs " well folks, there you have it ; )_ in the Dataframe `dirty bomb`.
+_"I'm not a dirty whore, I bathe and I don't get paid. I'm a nice lady who gives bomb ass blowjobs " well folks, there you have it ; )_. in the Dataframe `dirty bomb`.
 
 We tried removing those through detecting "positive" words specific to each Dataframe, but that lead to the elimination of many relevant Tweets as well (eliminating tweets contatining the word `bath` in `dirty bomb` eliminates all Tweets mentioning a `bloodbath` for example), so the procedure seemed to do more harm than good and we made the choice of leaving those funny Tweets in the dataset as they represented a minority that shouldn't really affect the conclusion. 
 
+## Accounting for the interactive nature of Twitter
+
+It's not only the writing of Tweets that can be registered by the government surveillance (and hence be prone to chilling effects), but other forms of online interaction as well (likes for example), so in our model we chose to model the total number of action instead of just the total number of Tweets, "action" meaning Tweeting, liking or replying.
+
+We got a total of **`#####`** actions over the period, the model we chose to do is a segmented linear regression of monthly aggregated data like in the original paper. This model helps us probe changes in trend in our data before and after the hypothesised chiller event (in this case Edward Snowden's revelation about U.S government surveillance).
+
+The gives us the following plot:
+
+**`PLOT HERE`**
+
+As we see, the trend in our data does change, but changes rather starkly to increase, and mostly due to extremely high values in the late summer of 2014, those values we deem to be due to the big increase in activity of ISIS during that period, so the terms included in our search became "hot topics" and were often mentioned and discussed over and over again on Twitter. But the other datapoints don't really seem to show any change in trend caused by the Snowden's leaks.
 
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/theophanemayaud/can-twitter-be-chill/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
