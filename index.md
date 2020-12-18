@@ -26,7 +26,7 @@ To do so, we used the Python module `Twint` to scrape the Tweets described above
 
 ## Warming Up (our CPUs)
 
-We went on and recovered the data as planned (after a test run on Twitter Superstar Donald Trump's account), and retrieved about 25 GB of Twitter Data (Tweets, mentions, likes, etc. as well as metadata) containing the following keywords:
+We went on and recovered the data as planned (after a test run on Twitter Superstar Donald Trump's account), and retrieved about 65 GB of Twitter Data (Tweets, mentions, likes, etc. as well as metadata) containing the following keywords:
 
 ```abu sayyaf, agro, al-qaeda in the arabian peninsula, al-qaeda in the islamic maghreb, al-qaeda, al-shabaab, ammonium nitrate, biological weapon, car bomb, chemical weapon, conventional weapon, dirty bomb, eco-terrorism, environmental terrorism, euskadi ta askatasuna, extremism, farc, fundamentalism, hamas, hezbollah, improvised explosive device, iraq, irish republican army, islamist, jihad, nationalism, nigeria, nuclear enrichment, nuclear, palestine liberation front, plo, political radicalism, somalia, suicide attack, suicide bomber, taliban, tamil tigers, tehrik-i-taliban pakistan, terrorism, terror, weapons-grade, yemen```
 
@@ -65,8 +65,17 @@ The gives us the following plot:
 As we see, the trend in our data does change, but changes rather starkly to increase, and mostly due to extremely high values in the late summer of 2014, those values we deem to be due to the big increase in activity of ISIS during that period, so the terms included in our search became "hot topics" and were often mentioned and discussed over and over again on Twitter. But the other datapoints don't really seem to show any change in trend caused by the Snowden's leaks.
 
 ## Whipping up (our Conclusions)
-We conclude that...
+Seeing the results we obtain, we conclude the following:
+1. Twitter doesn't seem to show chilling effects as Wikipedia did.
+
+2. If anything we see the inverse as more conversations and debates are sparked around such controvercies as government surveillance.
+
+3. Twitter data is a real hassle to work with, but it has some gems that can brighten up one's day
 
 
 ## Looking Back (not up)
-What we would have done differently
+In hindsight, we see that our methodology lacked some rigour in data cleaning (removing irrelevant Tweets), and more time should have been spent on that task.
+
+We also didn't expect the scraping to take such a long time, so we ended up having little time to actually work with the data, so we should have started a bit earlier.
+
+
