@@ -34,7 +34,9 @@ The data recovery went on for several days, probably used enough energy for us t
 
 As a matter of fact, as of the time this datastory is being written, the two biggest Dataframes haven't really finished downloading (`pakistan` and `attack`).
 
-Nonetheless, we were able to retrieve the other 46 dataframes and had millions of Tweets to work with.
+Nonetheless, we were able to retrieve the other 45 dataframes and had 134 million Tweets to work with. The tweets per dataframe had the following distribution
+
+![tweet_histogram](twitter_hist.png)
 
 ## Cleaning Up (our DFs)
 
@@ -60,7 +62,7 @@ the model we chose to do is a segmented linear regression of monthly aggregated 
 
 The gives us the following plot:
 
-**`PLOT HERE`**
+![Segmented Regression of Data](regression.png)
 
 As we see, the trend in our data does change, but changes rather starkly to increase, and mostly due to extremely high values in the late summer of 2014, those values we deem to be due to the big increase in activity of ISIS during that period, so the terms included in our search became "hot topics" and were often mentioned and discussed over and over again on Twitter. But the other datapoints don't really seem to show any change in trend caused by the Snowden's leaks.
 
